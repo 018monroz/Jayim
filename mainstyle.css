@@ -1,0 +1,29 @@
+.app{
+    width:380px;
+    height:500px;
+    background:rgb(58, 207, 170);
+    overflow:auto;
+    position: relative;
+  }
+
+.logomini{
+    position: absolute;
+    left: 15%;
+    top: 5%;
+}
+
+.profnconf{
+    position: absolute;
+    left: 60%;
+    top: 5%;
+}
+
+.citas{
+    background: white;
+    position: absolute;
+    left: 10%;
+    top: 20%;
+    border: 1px solid black;
+    border-collapse: collapse;
+    width: 78%;
+}
