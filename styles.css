@@ -15,9 +15,28 @@
   margin: -50px 0 0 -50px;
 }
 
+.logo{
+  position: absolute;
+  top: 20%;
+  left: 40%;
+}
+
 .text{
   position: absolute;
   text-align: center;
   bottom: 20%;
   left: 23%;
+}
+
+.inicio{
+  position: absolute;
+  text-align: center;
+  bottom: 40%;
+  left: 23%;
+}
+
+.botones{
+  position: absolute;
+  bottom: 30%;
+  left: 40%;
 }
