@@ -31,12 +31,18 @@
 .inicio{
   position: absolute;
   text-align: center;
-  bottom: 40%;
+  bottom: 45%;
   left: 23%;
 }
 
-.botones{
+.botonesIni{
   position: absolute;
   bottom: 30%;
-  left: 40%;
+  left: 30%;
+}
+
+.botonesReg{
+  position: absolute;
+  bottom: 20%;
+  left: 30%;
 }
