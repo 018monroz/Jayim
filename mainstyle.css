@@ -1,15 +1,24 @@
+*{
+    margin: 2;
+}
+
 .app{
     width:380px;
-    height:500px;
-    background:rgb(58, 207, 170);
+    height:665px;
+    background: rgb(255,255,255);
+    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(58,126,125,1) 52%, rgba(29,68,68,1) 100%);
     overflow:auto;
     position: relative;
+    border-color: black;
+    border-radius: 20px;
+    border-style: solid;
   }
 
 .logomini{
     position: absolute;
     left: 15%;
     top: 5%;
+    
 }
 
 .profnconf{
@@ -26,6 +35,9 @@
     border: 1px solid black;
     border-collapse: collapse;
     width: 78%;
+    border-color: black;
+    border-radius: 20px;
+    border-style: solid;
 }
 
 .medicamentos{
@@ -36,6 +48,9 @@
     border: 1px solid black;
     border-collapse: collapse;
     width: 78%;
+    border-color: black;
+    border-radius: 20px;
+    border-style: solid;
 }
 
 .titulo1{

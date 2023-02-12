@@ -1,24 +1,30 @@
 .app{
     width:380px;
-    height:500px;
-    background:rgb(58, 207, 170);
+    height:665px;
+    background: rgb(255,255,255);
+    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(58,126,125,1) 52%, rgba(29,68,68,1) 100%);
     overflow:auto;
     position: relative;
+    border-color: black;
+    border-radius: 20px;
+    border-style: solid;
   }
 
 .center{
   margin: 0 auto;
   /*height: 100px;*/
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 20%;
+  left: 30%;
   margin: -50px 0 0 -50px;
 }
 
 .logo{
   position: absolute;
-  top: 20%;
-  left: 40%;
+  top: 10%;
+  left: 15%;
+  border-radius: 10px;
+
 }
 
 .text{
@@ -31,7 +37,7 @@
 .inicio{
   position: absolute;
   text-align: center;
-  bottom: 45%;
+  bottom: 40%;
   left: 23%;
 }
 
