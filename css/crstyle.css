@@ -9,7 +9,20 @@
     border-radius: 20px;
     border-style: solid;
 }
+.logo{
+    border-radius: 10px;
+    height: 60px;
+    width: 70px;
 
+}
+.btn_cerrar{
+    background-color: #307473;
+    position: absolute;
+    left: 80%;
+    margin-top: 27px;
+    height: 42px;
+    border-radius: 30px;
+}
 .logomini{
     position: absolute;
     left: 10%;
@@ -17,11 +30,6 @@
     
 }
 
-.cerrar{
-    position: absolute;
-    left: 80%;
-    top: 5%;
-}
 
 .titulo{
     position: absolute;
