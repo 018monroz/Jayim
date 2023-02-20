@@ -11,8 +11,8 @@
 }
 .logo{
     border-radius: 10px;
-    height: 60px;
-    width: 70px;
+    height: 40px;
+    width: 50px;
 
 }
 .btn_cerrar{
@@ -51,12 +51,6 @@
     text-align: center;
 }
 
-.enviar{
-    position: absolute;
-    border-color: black;
-    bottom: 5%;
-    left: 40%;
-}
 
 .citas{
     background: white;
@@ -69,4 +63,21 @@
     border-color: black;
     border-radius: 20px;
     border-style: solid;
+}
+.btn_enviar{
+    height: 35px;
+    width: 200px;
+    border-radius: 20px;
+    color: black;
+    font-weight: bold;
+    border-style: solid;
+    background: rgb(255,255,255);
+    position: absolute;
+    border-color: black;
+    bottom: 3%;
+    left: 25%;
+}
+.btn_enviar:hover{
+    border-color: white;
+    font-style: bright;
 }
