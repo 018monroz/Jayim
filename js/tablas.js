@@ -61,34 +61,3 @@ function enviarCita(){
   aggCita(obj);
   localStorage.setItem("cita "+(localStorage.length+1),JSON.stringify(citas));
 }
-
-/*
-window.onload=function(){
-  aggCita({
-    cita: "Otorrino",
-    hora: "7:30"
-  });
-  
-  aggCita({
-    cita: "Odontologo",
-    hora: "4:00"
-  });
-
-  aggMedicamento({
-    medicamento: "Acetaminofén",
-    hora: "8:00"
-  });
-
-localStorage.setItem("citas",JSON.stringify(citas));
-  
-  for(i in citas){
-    tablaCitas.innerHTML += "<tr><td>"+citas[i].cita+"</td><td>"+citas[i].hora+"</td></tr>"
-  }
-
-  for(i in medicamentos){
-    tablaMedicamentos.innerHTML += "<tr><td>"+medicamentos[i].medicamento+"</td><td>"+medicamentos[i].hora+"</td></tr>"
-  }
-  
-
-
-*/
