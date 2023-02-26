@@ -22,16 +22,16 @@ function inicializarSecciones(){
     secciones["btn_aggcita"]="aggcita.html";
 }
 function inicializarVbles(){
-    btn_main=document.getElementById("btn_main")
-    btn_login=document.getElementById("btn_login")
-    btn_registro=document.getElementById("btn_registro")
-    btn_Perfil=document.getElementById("btn_Perfil")
-    btn_inicio=document.getElementById("btn_inicio")
-    btn_delmed=document.getElementById("btn_delmed")
-    btn_delcita=document.getElementById("btn_delcita")
-    bbtn_config=document.getElementById("bbtn_config")
-    btn_aggmed=document.getElementById("btn_aggmed")
-    btn_cita=document.getElementById("btn_cita")
+    btn_main=document.getElementById("btn_main");
+    btn_login=document.getElementById("btn_login");
+    btn_registro=document.getElementById("btn_registro");
+    btn_Perfil=document.getElementById("btn_Perfil");
+    btn_inicio=document.getElementById("btn_inicio");
+    btn_delmed=document.getElementById("btn_delmed");
+    btn_delcita=document.getElementById("btn_delcita");
+    bbtn_config=document.getElementById("bbtn_config");
+    btn_aggmed=document.getElementById("btn_aggmed");
+    btn_cita=document.getElementById("btn_cita");
 }
 function crearEventos(){
     btn_home.addEventListener("click",enrutador);
