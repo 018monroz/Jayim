@@ -20,7 +20,7 @@ window.onload=function(){
 localStorage.setItem("citas",JSON.stringify(citas));
   
   for(i in citas){
-    tablaCitas.innerHTML += "<tr><td>"+citas[i].cita+"</td><td>"+citas[i].hora+"</td></tr>";
+    tablaCitas.innerHTML += "<tr><td>"+citas[i].cita+"</td><td>"+citas[i].hora+"</td></tr>"
   }
   
 
