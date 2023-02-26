@@ -129,3 +129,24 @@
     border-style: solid;
     border-radius: 80px;
 }
+#div1 {
+    border-color: black;
+    background-color: white;
+    overflow:scroll;
+    margin-left: 2%;
+    height:150px;
+    width:95%;
+}
+#div1 table {
+   width:100%;
+   background-color:whitesmoke;
+   border-style: none;
+}
+#div1 table th{
+    position: sticky;
+}
+#div1 table td{
+    height: 50px;
+    text-align: center;
+    
+}

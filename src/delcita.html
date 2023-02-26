@@ -17,50 +17,24 @@
             <h2>Eliminar cita</h2>
         </div>
 
-        <div class="formulario">
-            <br><br><br><br>
+        <div class="formulario"><br>
             <div class="foto">
                 <img src="https://i.pinimg.com/736x/65/3d/5c/653d5cf7171ab047937fa141b254c14a.jpg" alt="">
             </div><br>
             <h2>Seleccione la cita que desea eliminar</h2>
             <div class="seccion1">
                 <div class="caja">
-                    <select>
+                    <select id="seccionesCitas">
                       <option selected value="cita1">Seleccione una cita</option>
-                      <option value="cita1">cita 1</option>
-                      <option value="cita2">cita 2</option>
-                      <option value="cita3">cita 3</option>
-                      <option value="cita4">cita 4</option>
                     </select>
                 </div>
             </div>
             <div class="titulo1">
                 <h2>Tus citas</h2>
             </div>
-            <div class="citas">
-                <table style="width:100%">
-                    <tr>
-                        <th style="width:70%">cita</th>
-                        <th>Hora</th>
-                    </tr>
-                    <tr>
-                        <td>Titulo cita 1</td>
-                        <td>00:00</td>
-                    </tr>
-                    <tr>
-                        <td>titulo cita 2</td>
-                        <td>00:00</td>
-                    </tr>
-                    <tr>
-                        <td>Titulo cita 3</td>
-                        <td>00:00</td>
-                    </tr>
-                    <tr>
-                        <td>titulo cita 4</td>
-                        <td>00:00</td>
-                    </tr>
-                    
-                    
+            <div id="div1">
+                <table border=1 id="tablaCitas">
+                    <tr><th>#</th><th>cita</th><th>Hora</th></tr>
                 </table>
             </div>
 
@@ -72,6 +46,7 @@
 
 
     </div>
+    <script src="js/actualizar_delcita.js"></script>
     <script src="js/navegacion.js"></script>
 </body>
 </html>
