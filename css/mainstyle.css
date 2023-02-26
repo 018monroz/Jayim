@@ -27,18 +27,7 @@
     top: 5%;
 }
 
-.citas{
-    background: white;
-    position: absolute;
-    left: 10%;
-    top: 20%;
-    border: 1px solid black;
-    border-collapse: collapse;
-    width: 78%;
-    border-color: black;
-    border-radius: 20px;
-    border-style: solid;
-}
+
 
 .medicamentos{
     background: white;
@@ -67,12 +56,12 @@
 
 .btnCitas{
     position: absolute;
-    top: 45%;
+    display: flex;
     left: 10%;
 }
 
 .btnMeds{
     position: absolute;
-    top: 85%;
-    left: 10%;
+    display: flex;
+    left: 7%;
 }

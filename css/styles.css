@@ -10,7 +10,9 @@
     border-radius: 20px;
     border-style: solid;
   }
-
+*{
+  padding-left: 20%;
+}
 .center{
   margin: 0 auto;
   /*height: 100px;*/

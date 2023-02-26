@@ -6,43 +6,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/mainstyle.css">
+    <link rel="stylesheet" href="css/main.css">
 
 </head>
 <body>
     <div class="app">
-        <div class="logomini">
-            <img src="Colocar algo q funcione xd" alt="mini">
-        </div>
-        <div class="profnconf">
-            <img id="btn_Perfil" src="conf.png" alt="conf">
-            <img id="btn_config" src="prof.png" alt="prof">
+        <div class="header-main">
+            <img class="logo" src="https://cdn.discordapp.com/attachments/845745384953610240/1074132969322729522/1b8bdcf6004ed831ea6441af83a38a3e-signo-de-simbolo-de-medicina.png" alt="">
+            <p class="p1">Principal</p>
+            <input type="image" class="btn_config" id="btn_config" src="assets/config.png" alt="" height="42px" width="42px">
+            <input type="image" class="btn_perfil" id="btn_Perfil" src="assets/perfil.png" alt="" height="42px" width="42px">   
         </div>
 
         <div class="titulo1">
             <h2>Tus citas</h2>
         </div>
 
-        <div class="citas">
+        <div id="div1">
+            <table border="1">
+               <tr><th>Citas</th><th>Hora</th></tr>
+           </table>
+       </div>
+
+<!-- <div class="citas">
             <table style="width:100%" id="tablaCitas">
                 <tr>
                     <th style="width:70%">cita</th>
                     <th>Hora</th>
-                </tr>
-                
-                
+                </tr>  
             </table>
         </div>
 
-        <div class="btnCitas">
-            <a id="btn_aggCita"><img src="aggCita.png" alt="Aggcita"></a>
-            <a id="btn_delcita"><img src="delCita.png" alt="delcita"></a>
-        </div>
-
-        <div class="titulo2">
-            <h2>Tus medicamentos</h2>
-        </div>
-
-        <div class="medicamentos">
+<div class="medicamentos">
             <table style="width:100%" id="tablaMedicamentos">
                 <tr>
                     <th style="width:70%">Medicamento</th>
@@ -52,9 +47,29 @@
                 
             </table>
         </div>
+-->
+        
+        
+        
+
+        <div class="btnCitas">
+            <input type="button" class="btn_aggCita" id="btn_aggcita" value="Agregar Cita">
+            <input type="button" class="btn_delCita" id="btn_delcita" value="Eliminar Cita">
+        </div>
+
+        <div class="titulo2">
+            <h2>Tus medicamentos</h2>
+        </div>
+
+        <div id="div2">
+            <table border="1">
+               <tr><th>Medicamento</th><th>Hora</th></tr>
+           </table>
+       </div>
+
         <div class="btnMeds">
-            <a id="btn_aggmed"><img src="aggMed.png" alt="AggMed"></a>
-            <a id="btn_delmed"><img src="delmed.png" alt="delmed"></a>
+            <input type="button" class="btn_aggMed" id="btn_aggmed" value="Agregar medicamento">
+            <input type="button" class="btn_delMed" id="btn_delmed" value="Eliminar medicamento">
         </div>
     </div>
     <div>
