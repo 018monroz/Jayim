@@ -43,13 +43,19 @@ input{
     overflow:scroll;
     margin-left: 10%;
     margin-top: 20%;
-    height:120px;
+    height:140px;
     width:78%;
 }
 #div1 table {
    width:100%;
    background-color:whitesmoke;
    border-style: none;
+}
+#div1 table th{
+    position: sticky;
+}
+#div1 table td{
+    height: 100px;
 }
 #div2 {
     border-color: black;
@@ -121,4 +127,11 @@ input{
 }
 .titulo1, .titulo2{
     color: white;
+}
+a{
+    color: blue;
+}
+a:hover{
+    text-decoration-line: underline;
+    cursor: pointer;
 }

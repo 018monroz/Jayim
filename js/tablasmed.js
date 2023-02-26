@@ -1,6 +1,4 @@
 let medicamentos=[];
-let tablaCitas = document.getElementById("tablaCitas");
-let tablaMedicamentos = document.getElementById("tablaMedicamentos");
 
 var nomMed,cantidad,periodicidad,dias,horas,horamed,fecha,btn_enviar;
 
