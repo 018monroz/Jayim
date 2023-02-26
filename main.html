@@ -8,14 +8,15 @@
     <link rel="stylesheet" href="css/mainstyle.css">
     <link rel="stylesheet" href="css/main.css">
 
+    <script src="js/navegacion.js"></script>
 </head>
 <body>
     <div class="app">
         <div class="header-main">
             <img class="logo" src="https://cdn.discordapp.com/attachments/845745384953610240/1074132969322729522/1b8bdcf6004ed831ea6441af83a38a3e-signo-de-simbolo-de-medicina.png" alt="">
             <p class="p1">Principal</p>
-            <input type="image" class="btn_config" id="btn_config" src="assets/config.png" alt="" height="42px" width="42px">
-            <input type="image" class="btn_perfil" id="btn_Perfil" src="assets/perfil.png" alt="" height="42px" width="42px">   
+            <input type="image" class="btn_config" id="btn_Configuracion" onclick="inicializar(event)" src="assets/config.png" alt="" height="42px" width="42px">
+            <input type="image" class="btn_perfil" id="btn_Perfil" onclick="inicializar(event)" src="assets/perfil.png" alt="" height="42px" width="42px">   
         </div>
 
         <div class="titulo1">
@@ -53,8 +54,8 @@
         
 
         <div class="btnCitas">
-            <input type="button" class="btn_aggCita" id="btn_aggcita" value="Agregar Cita">
-            <input type="button" class="btn_delCita" id="btn_delcita" value="Eliminar Cita">
+            <input type="button" class="btn_aggCita" id="btn_aggcita" onclick="inicializar(event)" value="Agregar Cita">
+            <input type="button" class="btn_delCita" id="btn_delcita" onclick="inicializar(event)" value="Eliminar Cita">
         </div>
 
         <div class="titulo2">
@@ -68,13 +69,11 @@
        </div>
 
         <div class="btnMeds">
-            <input type="button" class="btn_aggMed" id="btn_aggmed" value="Agregar medicamento">
-            <input type="button" class="btn_delMed" id="btn_delmed" value="Eliminar medicamento">
+            <input type="button" class="btn_aggMed" id="btn_aggmed" onclick="inicializar(event)" value="Agregar medicamento" >
+            <input type="button" class="btn_delMed" id="btn_delmed" onclick="inicializar(event)" value="Eliminar medicamento">
         </div>
     </div>
-    <div>
-    <script src="js/navegacion.js"></script>
-    <script src="js/tablas.js"></script></div>
     
+    <script src="js/navegacion.js"></script>
 </body>
 </html>
