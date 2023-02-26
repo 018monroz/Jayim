@@ -34,11 +34,17 @@ function inicializarVbles(){
     btn_cita=document.getElementById("btn_cita");
 }
 function crearEventos(){
-    btn_home.addEventListener("click",enrutador);
+    btn_main.addEventListener("click",enrutador);
     btn_login.addEventListener("click",enrutador);
     btn_registro.addEventListener("click",enrutador);
+    btn_Perfil.addEventListener("click",enrutador);
+    btn_inicio.addEventListener("click",enrutador);
+    btn_delmed.addEventListener("click",enrutador);
+    btn_delcita.addEventListener("click",enrutador);
+    bbtn_config.addEventListener("click",enrutador);
+    btn_aggmed.addEventListener("click",enrutador);
+    btn_cita.addEventListener("click",enrutador);
 }
-function enrutador(evento){//a que se le dio click
-    //target, saber a que le dio click a un boton
+function enrutador(evento){
     location.href = secciones[evento.target.id];
 }
