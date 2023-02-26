@@ -22,27 +22,28 @@
         <div class="formulario">
             <br><br>
             <h3>Nombre de medicamento</h3>
-            <input type="text">
+            <input type="text" id="nomMed">
             <h3>Periodicidad</h3>
             <p>Cantidad:</p>
-            <input type="number">
+            <input type="number" id="cantidad">
             <h3>Cada cuanto?</h3>
-            <input type="number">
+            <input type="number" id="periodicidad">
             <br><br>
-                <input type="radio" name="radio"> Dias
-                <input type="radio" name="radio"> Horas
+                <input type="radio" name="radio" id="dias"> Dias
+                <input type="radio" name="radio" id="horas"> Horas
             
             <h3>Hora  ---  Fecha</h3>
-            <input type="time">
-            <input type="date">          
+            <input type="time" id="horamed">
+            <input type="date" id="fecha">          
         </div>
 
         <div class="enviar">
-            <button class="btn_enviar">Enviar</button>
+            <button class="btn_enviar" id="btn_enviarmed">Enviar</button>
         </div>
 
 
     </div>
+    <script src="js/tablas.js"></script>
     <script src="js/navegacion.js"></script>
 </body>
 </html>
