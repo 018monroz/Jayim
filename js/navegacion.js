@@ -29,7 +29,7 @@ function inicializarVbles(){
     btn_inicio=document.getElementById("btn_inicio");
     btn_delmed=document.getElementById("btn_delmed");
     btn_delcita=document.getElementById("btn_delcita");
-    bbtn_config=document.getElementById("bbtn_config");
+    btn_config=document.getElementById("btn_config");
     btn_aggmed=document.getElementById("btn_aggmed");
     btn_cita=document.getElementById("btn_cita");
 }
