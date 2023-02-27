@@ -2,10 +2,7 @@ let tablaCitas = document.getElementById("tablaCitas");
 let tablaMedicamentos = document.getElementById("tablaMedicamentos");
 
 var tipoCita,tipoCita,descripcion,nomMedico,tipoMedico,hora,fecha,lugar,btn_enviar;
-
-
-
-
+var idcita=0;
 
 window.onload=init;
 
@@ -13,7 +10,6 @@ function init(){
   btn_enviar=document.getElementById("btn_enviar");
   btn_enviar.addEventListener("click",enviarCita);
 }
-
 
 function enviarCita(){
   tipoCita=document.getElementById("tipoCita").value;
@@ -24,7 +20,6 @@ function enviarCita(){
   fecha=document.getElementById("fecha").value;
   lugar=document.getElementById("lugar").value;
   
-
   document.getElementById("tipoCita").value="";
   document.getElementById("descripcion").value="";
   document.getElementById("nomMedico").value="";
@@ -33,18 +28,6 @@ function enviarCita(){
   document.getElementById("fecha").value="";
   document.getElementById("lugar").value="";
 
-
-
-
-  /*
-  var texto="Tipo de cita: "+tipoCita+"\n"+
-            "Descripción: "+descripcion+"\n"+
-            "Nombre del medico: "+nomMedico+"\n"+
-            "Tipo de medico: "+tipoMedico+"\n"+
-            "Fecha: "+fecha+"\n"+
-            "Lugar: "+lugar;
-  
-  console.log(texto);*/
   var obj={
     Tipo_cita: tipoCita,
     Descripcion: descripcion,
@@ -54,5 +37,12 @@ function enviarCita(){
     Lugar: lugar,
     Hora: hora
   }
-  localStorage.setItem("cita "+(localStorage.length+1),JSON.stringify(obj));
+  try {
+    idcita=JSON.parse(localStorage.getItem("idCita").toString());
+    localStorage.setItem("idCita",(idcita+1));
+  } catch (error) {
+    idcita=0;
+    localStorage.setItem("idCita",idcita+1);
+  }
+  localStorage.setItem("cita "+(idcita+1),JSON.stringify(obj));
 }

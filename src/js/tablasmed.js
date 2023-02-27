@@ -1,19 +1,12 @@
-let medicamentos=[];
 
 var nomMed,cantidad,periodicidad,dias,horas,horamed,fecha,btn_enviar;
-
-
-function aggMedicamento(obj){
-    medicamentos.push(obj);
-}
-
+var idMed=0;
 
 window.onload=init;
 
 function init(){
   btn_enviar=document.getElementById("btn_enviar");
   btn_enviar.addEventListener("click",enviarMed);
-  console.log(btn_enviar.id);
 }
 
 function enviarMed(){
@@ -25,15 +18,6 @@ function enviarMed(){
   horamed=document.getElementById("horamed").value;
   fecha=document.getElementById("fecha").value;
 
-  console.log(nomMed);
-  console.log(cantidad);
-  console.log(periodicidad);
-  console.log(dias);
-  console.log(horas);
-  console.log(horamed);
-  console.log(fecha);
-
-
   document.getElementById("nomMed").value="";
   document.getElementById("cantidad").value="";
   document.getElementById("periodicidad").value="";
@@ -42,7 +26,6 @@ function enviarMed(){
   document.getElementById("horamed").value="";
   document.getElementById("fecha").value="";
   
-
   var obj={
     Nombre_medico: nomMed,
     Cantidad: cantidad,
@@ -52,6 +35,12 @@ function enviarMed(){
     Horamed: horamed,
     Fecha: fecha
   }
-  aggMedicamento(obj);
-  localStorage.setItem("Medicamento "+(localStorage.length+1),JSON.stringify(medicamentos));
+  try {
+    idMed=JSON.parse(localStorage.getItem("idMed").toString());
+    localStorage.setItem("idMed",(idMed+1));
+  } catch (error) {
+    idMed=0;
+    localStorage.setItem("idMed",idMed+1);
+  }
+  localStorage.setItem("med "+idMed,JSON.stringify(obj));
 }

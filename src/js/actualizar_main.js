@@ -11,8 +11,8 @@ function init(){
             "Nombre del medico: "+value['NomMedico']+" // "+
             "Lugar: "+value['Lugar'];
 
-            tablaCitas.innerHTML += "<tr><td>"+localStorage.key(i).toString()+"</td><td>"+text+"</td><td>"+value['Hora']+"</td></tr>";   
-        }else{
+            tablaCitas.innerHTML += "<tr><td>"+key[1]+"</td><td>"+text+"</td><td>"+value['Hora']+"</td></tr>";   
+        }else if(key[0]=="med"){
             var value = JSON.parse(localStorage.getItem(localStorage.key(i)));
             alerta="Nombre_medico: "+value['Nombre_medico']+"\n"+
                 "Cantidad: "+value['Cantidad']+"\n"+
@@ -26,7 +26,7 @@ function init(){
                 "Cantidad: "+value['Cantidad']+" // "+
                 "Periodicidad: "+value['Periodicidad'];
 
-            tablaMedicamentos.innerHTML += "<tr><td>"+text+"</td><td>"+value['Periodicidad']+"</td></tr>";
+            tablaMedicamentos.innerHTML += "<tr><td>"+localStorage.key(i).toString()+"</td><td>"+text+"</td><td>"+value['Periodicidad']+"</td></tr>";
         }
     }
 }

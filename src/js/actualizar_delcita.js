@@ -12,7 +12,7 @@ function init(){
             "Nombre del medico: "+value['NomMedico']+" // "+
             "Lugar: "+value['Lugar'];
 
-             tablaCitas.innerHTML += "<tr><td>"+localStorage.key(i).toString()+"</td><td>"+text+"</td><td>"+value['Hora']+"</td></tr>";  
+            tablaCitas.innerHTML += "<tr><td>"+key[1]+"</td><td>"+text+"</td><td>"+value['Hora']+"</td></tr>";  
             seccionesCitas.innerHTML += "<option>"+localStorage.key(i).toString()+"</option>";   
         }
     }
