@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/perfil.css">
+    
     <title>Perfil</title>
 </head>
 <body>
@@ -21,8 +22,8 @@
             <div class="seccion1">
                 <p class="p2">Tipo patología</p>
                 <div class="caja">
-                    <select>
-                      <option selected></option>
+                    <select id="seccionesPato">
+                      <option selected>Seleccione un medicamento</option>
                       <option>Diabetes</option>
                       <option>Cáncer</option>
                       <option>Enfermedad cardiovascular</option>
@@ -35,7 +36,7 @@
                       <option>Alzheimer</option>
                       <option>Parkinson</option>
                       <option>Osteoporosis</option>
-                      <option> VIH</option>
+                      <option>VIH</option>
                       <option>Hepatitis</option>
                       <option>lupus</option>
                       <option>Esclerosis múltiple</option>
@@ -75,18 +76,20 @@
             <div class="seccion2">
                 <div class="descripcion">
                     <p class="p-descripcion">Descripción</p>
-                    <div class="caja-descripcion"></div>
+                    <textarea class="caja-descripcion" name="" id="txtarea" cols="30" rows="10"></textarea>
                 </div>
             </div>
-            <button class="btn_añadirP">Añadir</button>
-            <div class="seccion3">
-                <div class="patologias">
-                    <p class="p-patologias">Patologías</p>
-                    <div class="caja-patologias"></div>
-                </div>
+            <button class="btn_añadirP" id="btn_añadir" onclick="enviarPat()">Añadir</button>
+            <br><br>
+            <div id="div1">
+                <table border=1 id="tablaPato">
+                    <tr><th>id</th><th>patologia</th></tr>
+                </table>
             </div>
         </div>
     </div>
     <script src="js/navegacion.js"></script>
+    <script src="js/tablasPato.js"></script>
+    <script src="js/actualizar_pato.js"></script>
 </body>
 </html>

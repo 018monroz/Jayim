@@ -143,10 +143,14 @@
 }
 .caja-descripcion{
     margin-left: 5%;
+    padding-left: 2%;
+    padding-top: 2%;
+    padding-right: 2%;
     background-color: white;
     width: 90%;
     height: 110px;
     border-radius: 10px;
+    
 }
 .btn_añadirP{
     margin-left: 25%;
@@ -161,4 +165,25 @@
 .btn_añadirP:hover{
     border-color: white;
     font-style: bright;
+}
+#div1 {
+    border-color: black;
+    background-color: white;
+    overflow:scroll;
+    margin-left: 2%;
+    height:150px;
+    width:95%;
+}
+#div1 table {
+   width:100%;
+   background-color:whitesmoke;
+   border-style: none;
+}
+#div1 table th{
+    position: sticky;
+}
+#div1 table td{
+    height: 50px;
+    text-align: center;
+    
 }
