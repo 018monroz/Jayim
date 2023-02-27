@@ -1,4 +1,4 @@
-let tablaMedicamentos = document.getElementById("tablaMedicamentos");
+let tablaMedicamentos1 = document.getElementById("tablaMedicamentos");
 let tablaCitas = document.getElementById("tablaCitas");
 window.onload=init;
 function init(){
@@ -26,7 +26,7 @@ function init(){
                 "Cantidad: "+value['Cantidad']+" // "+
                 "Periodicidad: "+value['Periodicidad'];
 
-            tablaMedicamentos.innerHTML += "<tr id='"+key[1]+"'><td>"+localStorage.key(i).toString()+"</td><td>"+text+"</td><td>"+value['Periodicidad']+"</td></tr>";
+            tablaMedicamentos1.innerHTML += "<tr id='"+key[1]+"'><td>"+localStorage.key(i).toString()+"</td><td>"+text+"</td><td>"+value['Periodicidad']+"</td></tr>";
         }
     }
 }

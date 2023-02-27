@@ -1,6 +1,6 @@
 let seccionesCitas = document.getElementById("seccionesCitas");
 let tablaCitas1 = document.getElementById("tablaCitas");
-var btn_eliminar=document.getElementById("btn_eliminar");
+var btn_eliminar1=document.getElementById("btn_eliminar");
 
 window.onload=init;
 function init(){
