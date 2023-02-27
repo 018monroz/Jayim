@@ -1,5 +1,6 @@
 let seccionesCitas = document.getElementById("seccionesCitas");
 let tablaCitas = document.getElementById("tablaCitas");
+var btn_eliminar=document.getElementById("btn_eliminar");
 
 window.onload=init;
 function init(){
@@ -12,8 +13,24 @@ function init(){
             "Nombre del medico: "+value['NomMedico']+" // "+
             "Lugar: "+value['Lugar'];
 
-            tablaCitas.innerHTML += "<tr><td>"+key[1]+"</td><td>"+text+"</td><td>"+value['Hora']+"</td></tr>";  
-            seccionesCitas.innerHTML += "<option>"+localStorage.key(i).toString()+"</option>";   
+            tablaCitas.innerHTML += "<tr id='"+localStorage.key(i).toString()+"'><td>"+key[1]+"</td><td>"+text+"</td><td>"+value['Hora']+"</td></tr>";//filas  
+            seccionesCitas.innerHTML += "<option id='"+key[1]+"'>"+localStorage.key(i).toString()+"</option>";   //opciones
         }
     }
+}
+function eliminar(){
+    var selected = seccionesCitas.options[seccionesCitas.selectedIndex]; //option seleccionado
+    alert("se ha eliminado: "+selected.text);
+    var tr=document.getElementById(selected.text);
+    //console.log("fila: "+tr.id);
+    localStorage.removeItem(selected.text); //elimina objeto con esa key
+    tablaCitas.innerHTML="";
+    seccionesCitas.innerHTML="";
+    tablaCitas.innerHTML += "<tr><th>id</th><th>cita</th><th>Hora</th></tr>";
+    seccionesCitas.innerHTML += "<option selected>Seleccione una cita</option>";
+    //console.log("seleccionado: "+a);
+    //console.log("idseleccionado: "+selected.id);
+    //tr.innerHTML="";
+    init();
+
 }
