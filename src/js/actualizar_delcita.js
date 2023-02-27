@@ -19,18 +19,14 @@ function init(){
     }
 }
 function eliminar(){
-    var selected = seccionesCitas.options[seccionesCitas.selectedIndex]; //option seleccionado
+    var selected = seccionesCitas.options[seccionesCitas.selectedIndex];
     alert("se ha eliminado: "+selected.text);
     var tr=document.getElementById(selected.text);
-    //console.log("fila: "+tr.id);
-    localStorage.removeItem(selected.text); //elimina objeto con esa key
+    localStorage.removeItem(selected.text); 
     tablaCitas.innerHTML="";
     seccionesCitas.innerHTML="";
     tablaCitas.innerHTML += "<tr><th>id</th><th>cita</th><th>Hora</th></tr>";
     seccionesCitas.innerHTML += "<option selected>Seleccione una cita</option>";
-    //console.log("seleccionado: "+a);
-    //console.log("idseleccionado: "+selected.id);
-    //tr.innerHTML="";
     init();
 
 }

@@ -18,60 +18,34 @@
         </div>
 
         <div class="formulario">
-            <br><br><br><br>
-            <img src="fdp.png" alt="fdp" width="80" height="80" >
-            <br><br><br><br>
+            <br>
+            <div class="foto">
+                <img src="https://i.pinimg.com/736x/65/3d/5c/653d5cf7171ab047937fa141b254c14a.jpg" alt="">
+            </div><br>
             <h2>Seleccione el medicamento que desea eliminar</h2>
             <div class="seccion1">
                 <div class="caja">
-                    <select>
-                        <option selected value="Seleccione">Seleccione un medicamento</option>
-                        <option value="med1">Medicamento 1</option>
-                        <option value="med2">Medicamento 2</option>
-                        <option value="med3">Medicamento 3</option>
-                        <option value="med4">Medicamento 4</option>
+                    <select id="seccionesMed">
+                        <option selected >Seleccione un medicamento</option>
                     </select>
                 </div>
             </div>
-            <br><br><br><br>
             <div class="titulo1">
                 <h2>Tus medicamentos</h2>
             </div>
-            <div class="citas">
-                <table style="width:100%">
-                    <tr>
-                        <th style="width:70%">cita</th>
-                        <th>Hora</th>
-                    </tr>
-                    <tr>
-                        <td>Medicamento 1</td>
-                        <td>00:00</td>
-                    </tr>
-                    <tr>
-                        <td>Medicamento 2</td>
-                        <td>00:00</td>
-                    </tr>
-                    <tr>
-                        <td>Medicamento 3</td>
-                        <td>00:00</td>
-                    </tr>
-                    <tr>
-                        <td>Medicamento 4</td>
-                        <td>00:00</td>
-                    </tr>
-                    
-                    
+            <div id="div1">
+                <table border=1 id="tablaMed">
+                    <tr><th>id</th><th>cita</th><th>Hora</th></tr>
                 </table>
             </div>
 
         </div>
 
         <div class="enviar">
-            <button class="btn_enviar">Eliminar</button>
+            <button class="btn_enviar" id="btn_eliminar" onclick="eliminar()">Eliminar</button>
         </div>
-
-
     </div>
+    <script src="js/actualizar_delmed.js"></script>
     <script src="js/navegacion.js"></script>
 </body>
 </html>

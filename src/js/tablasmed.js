@@ -42,5 +42,5 @@ function enviarMed(){
     idMed=0;
     localStorage.setItem("idMed",idMed+1);
   }
-  localStorage.setItem("med "+idMed,JSON.stringify(obj));
+  localStorage.setItem("med "+(idMed+1),JSON.stringify(obj));
 }
