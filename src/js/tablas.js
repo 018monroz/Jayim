@@ -1,6 +1,3 @@
-let tablaCitas = document.getElementById("tablaCitas");
-let tablaMedicamentos = document.getElementById("tablaMedicamentos");
-
 var tipoCita,tipoCita,descripcion,nomMedico,tipoMedico,hora,fecha,lugar,btn_enviar;
 var idcita=0;
 
