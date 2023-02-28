@@ -140,3 +140,41 @@ a:hover{
     text-decoration-line: underline;
     cursor: pointer;
 }
+
+.contenedor{
+    /*border-style:solid;*/
+    height:100%;
+    width:97%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    grid-column-gap: px;
+    grid-row-gap: px;
+}
+
+.in1{
+    border-style:solid;
+    height:50px;
+}
+.in2{
+    border-style:solid;
+    height:50px;
+    
+}
+.in3{
+    border-style:solid;
+    height:50px;
+}
+.in4{
+    border-style:solid;
+    height:50px;
+}
+.in5{
+    border-style:solid;
+    height:50px;
+    
+}
+.in6{
+    border-style:solid;
+    height:50px;
+}  

@@ -12,7 +12,7 @@ function init(){
 function enviarPat(){
     seccionesPatos=document.getElementById("seccionesPato");
     descripcion=document.getElementById("txtarea").value;
-    tablaPato=document.getElementById("tablaPato");
+    tablaPato=document.getElementById("contenedorPato");
     document.getElementById("txtarea").value="";
 
         
@@ -33,7 +33,7 @@ function enviarPat(){
 
    
     var text="Patologia: "+obj['Patologia']+' // Descripcion: '+obj['Descripcion'];
-    tablaPato.innerHTML += "<tr id='"+idPato+"'><td>"+(idPato+1)+"</td><td>"+text+"</td></tr>";
+    tablaPato.innerHTML += "<div>"+(idPato+1)+"</div><div>"+text+"</div><div></div>";
         
     
 }

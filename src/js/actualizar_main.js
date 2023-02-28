@@ -1,5 +1,5 @@
-let tablaMedicamentos1 = document.getElementById("tablaMedicamentos");
-let tablaCitas = document.getElementById("tablaCitas");
+let tablaMedicamentos1 = document.getElementById("contenedorMedicamentos");
+let tablaCitas = document.getElementById("contenedorcitas");
 window.onload=init;
 function init(){
     for(var i=0, len=localStorage.length; i<len; i++) {
@@ -11,7 +11,7 @@ function init(){
             "Nombre del medico: "+value['NomMedico']+" // "+
             "Lugar: "+value['Lugar'];
 
-            tablaCitas.innerHTML += "<tr id='"+key[1]+"'><td>"+key[1]+"</td><td>"+text+"</td><td>"+value['Hora']+"</td></tr>";   
+            tablaCitas.innerHTML += "<div>"+key[1]+"</div><div>"+text+"</div><div>"+value['Hora']+"</div>";   
         }else if(key[0]=="med"){
             var value = JSON.parse(localStorage.getItem(localStorage.key(i)));
             alerta="Nombre_medico: "+value['Nombre_medico']+"\n"+
@@ -26,7 +26,7 @@ function init(){
                 "Cantidad: "+value['Cantidad']+" // "+
                 "Periodicidad: "+value['Periodicidad'];
 
-            tablaMedicamentos1.innerHTML += "<tr id='"+key[1]+"'><td>"+localStorage.key(i).toString()+"</td><td>"+text+"</td><td>"+value['Periodicidad']+"</td></tr>";
+            tablaMedicamentos1.innerHTML += "<div>"+localStorage.key(i).toString()+"</div><div>"+text+"</div><div>"+value['Periodicidad']+"</div>";
         }
     }
 }
