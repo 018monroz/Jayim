@@ -10,8 +10,8 @@ function init(){
             var text="Tipo de cita: "+value['Tipo_cita']+" // "+
             "Nombre del medico: "+value['NomMedico']+" // "+
             "Lugar: "+value['Lugar'];
-
-            tablaCitas.innerHTML += "<div>"+key[1]+"</div><div>"+text+"</div><div>"+value['Hora']+"</div>";   
+        
+            tablaCitas.innerHTML += "<div class='info'>"+key[1]+"</div><div class='info'>"+text+"</div><div class='info'>"+value['Hora']+"</div>";   
         }else if(key[0]=="med"){
             var value = JSON.parse(localStorage.getItem(localStorage.key(i)));
             alerta="Nombre_medico: "+value['Nombre_medico']+"\n"+
@@ -26,7 +26,7 @@ function init(){
                 "Cantidad: "+value['Cantidad']+" // "+
                 "Periodicidad: "+value['Periodicidad'];
 
-            tablaMedicamentos1.innerHTML += "<div>"+localStorage.key(i).toString()+"</div><div>"+text+"</div><div>"+value['Periodicidad']+"</div>";
+            tablaMedicamentos1.innerHTML += "<div class='info'>"+localStorage.key(i).toString()+"</div><div class='info'>"+text+"</div><div class='info'>"+value['Periodicidad']+"</div>";
         }
     }
 }
