@@ -26,7 +26,7 @@ function init(){
                 "Cantidad: "+value['Cantidad']+" // "+
                 "Periodicidad: "+value['Periodicidad'];
 
-            tablaMedicamentos1.innerHTML += "<div class='info'>"+localStorage.key(i).toString()+"</div><div class='info'>"+text+"</div><div class='info'>"+value['Periodicidad']+"</div>";
+            tablaMedicamentos1.innerHTML += "<div class='info'>"+key[1]+"</div><div class='info'>"+text+"</div><div class='info'>"+value['Periodicidad']+"</div>";
         }
     }
 }

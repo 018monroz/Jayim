@@ -20,13 +20,16 @@ function init(){
 }
 function eliminar(){
     var selected = seccionesCitas.options[seccionesCitas.selectedIndex];
-    alert("se ha eliminado: "+selected.text);
-    var tr=document.getElementById(selected.text);
-    localStorage.removeItem(selected.text); 
-    tablaCitas1.innerHTML="";
-    seccionesCitas.innerHTML="";
-    tablaCitas1.innerHTML += "<div class=\"in4\" style=\"grid-area: 1 / 1 / 2 / 2;\"> <h3>ID</h3> </div><div class=\"in5\" style=\"grid-area: 1 / 2 / 2 / 3;\"><h3>Cita</h3>  </div><div class=\"in6\" style=\"grid-area: 1 / 3 / 2 / 4;\"><h3>Hora</h3> </div>";
-    seccionesCitas.innerHTML += "<option selected>Seleccione una cita</option>";
-    init();
+    if(localStorage.getItem(selected.text)==null){
+        alert("Nada seleccionado");
+    }else{    
+        alert("Se ha eliminado: "+selected.text);
+        localStorage.removeItem(selected.text); 
+        tablaCitas1.innerHTML="";
+        seccionesCitas.innerHTML="";
+        tablaCitas1.innerHTML += '<div class="in1" style="grid-area: 1 / 1 / 2 / 2;"> <h3>ID</h3> </div><div class="in2" style="grid-area: 1 / 2 / 2 / 3;"><h3>Cita</h3>  </div><div class="in3" style="grid-area: 1 / 3 / 2 / 4;"><h3>Hora</h3> </div>';
+        seccionesCitas.innerHTML += "<option selected>Seleccione una cita</option>";
+        init();
+    }
 
 }

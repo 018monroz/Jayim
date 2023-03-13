@@ -1,6 +1,13 @@
 var tipoCita,tipoCita,descripcion,nomMedico,tipoMedico,hora,fecha,lugar,btn_enviar;
 var idcita=0;
 
+tipoCita=document.getElementById("tipoCita");
+descripcion=document.getElementById("descripcion");
+nomMedico=document.getElementById("nomMedico");
+tipoMedico=document.getElementById("tipoMedico");
+hora=document.getElementById("hora");
+fecha=document.getElementById("fecha");
+lugar=document.getElementById("lugar");
 window.onload=init;
 
 function init(){
@@ -10,53 +17,46 @@ function init(){
 
 function enviarCita(){
 
-  tipoCita=document.getElementById("tipoCita").value;
-  descripcion=document.getElementById("descripcion").value;
-  nomMedico=document.getElementById("nomMedico").value;
-  tipoMedico=document.getElementById("tipoMedico").value;
-  hora=document.getElementById("hora").value;
-  fecha=document.getElementById("fecha").value;
-  lugar=document.getElementById("lugar").value;
-
-  if(verificarCita(tipoCita)==false || verificarMedico(tipoMedico)==false || descripcion=="" || nomMedico=="" || hora=="" || fecha==""  || lugar=="" ){
+  const tiempoTranscurrido = Date.now();
+  const fe = new Date(fecha.value);
+  if(verificarCita(tipoCita.value)==false || verificarMedico(tipoMedico.value)==false || descripcion.value=="" || nomMedico.value=="" || hora.value=="" || fecha.value==""  || lugar.value=="" || (fe.getTime()<tiempoTranscurrido)){
     alert("campos en blanco o no validos");
   }else{
-      
-    document.getElementById("tipoCita").value="";
-    document.getElementById("descripcion").value="";
-    document.getElementById("nomMedico").value="";
-    document.getElementById("tipoMedico").value="";
-    document.getElementById("hora").value="";
-    document.getElementById("fecha").value="";
-    document.getElementById("lugar").value="";
-
     var obj={
-      Tipo_cita: tipoCita,
-      Descripcion: descripcion,
-      NomMedico: nomMedico,
-      Tipo_medico: tipoMedico, 
-      Fecha: fecha,
-      Lugar: lugar,
-      Hora: hora
+      Tipo_cita: tipoCita.value,
+      Descripcion: descripcion.value,
+      NomMedico: nomMedico.value,
+      Tipo_medico: tipoMedico.value,
+      Fecha: fecha.value,
+      Lugar: lugar.value,
+      Hora: hora.value
     }
-    try {
-      idcita=JSON.parse(localStorage.getItem("idCita").toString());
-      localStorage.setItem("idCita",(idcita+1));
-    } catch (error) {
+    if(JSON.parse(localStorage.getItem("idCita"))==null){
       idcita=0;
       localStorage.setItem("idCita",idcita+1);
+    }else{
+      idcita=JSON.parse(localStorage.getItem("idCita").toString());
+      localStorage.setItem("idCita",(idcita+1));
     }
     localStorage.setItem("cita "+(idcita+1),JSON.stringify(obj));
-
+    clear();
   }
 }
-function verificarCita() {
-  var input = document.getElementById("tipoCita").value;
+function clear(){
+  tipoCita.value="";
+  descripcion.value="";
+  nomMedico.value="";
+  tipoMedico.value="";
+  hora.value="";
+  fecha.value="";
+  lugar.value="";
+}
+function verificarCita(tipoCita) {
   var opciones = document.getElementById("opciones-consultas").options;
   var encontrado = false;
 
   for (var i = 0; i < opciones.length; i++) {
-    if (input === opciones[i].value) {
+    if (tipoCita === opciones[i].value) {
       encontrado = true;
       break;
     }

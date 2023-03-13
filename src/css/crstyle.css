@@ -132,29 +132,15 @@
 #div1 {
     border-color: black;
     background-color: white;
-    overflow:scroll;
-    margin-left: 2%;
-    height:150px;
-    width:95%;
-}
-#div1 table {
-   width:100%;
-   background-color:whitesmoke;
-   border-style: none;
-}
-#div1 table th{
-    position: sticky;
-}
-#div1 table td{
-    height: 50px;
-    text-align: center;
-    
+    overflow-y: scroll;
+    height:145px;
+    width:100%;
 }
 
 .contenedor{
     /*border-style:solid;*/
     height:100%;
-    width:97%;
+    width:100%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(12, 1fr);
@@ -163,28 +149,18 @@
 }
 
 .in1{
-    border-style:solid;
+    border-left: solid;
+    border-top: solid;
+    border-bottom: solid;
     height:50px;
 }
 .in2{
-    border-style:solid;
+    border-style: solid;
     height:50px;
-    
 }
 .in3{
-    border-style:solid;
+    border-right: solid;
+    border-top: solid;
+    border-bottom: solid;
     height:50px;
 }
-.in4{
-    border-style:solid;
-    height:50px;
-}
-.in5{
-    border-style:solid;
-    height:50px;
-    
-}
-.in6{
-    border-style:solid;
-    height:50px;
-} 

@@ -1,7 +1,13 @@
 
 var nomMed,cantidad,periodicidad,dias,horas,horamed,fecha,btn_enviar;
 var idMed=0;
-
+nomMed=document.getElementById("tipoMedicamento");
+cantidad=document.getElementById("cantidad");
+periodicidad=document.getElementById("periodicidad");
+dias=document.getElementById("dias");
+horas=document.getElementById("horas");
+horamed=document.getElementById("horamed");
+fecha=document.getElementById("fecha");
 window.onload=init;
 
 function init(){
@@ -10,53 +16,46 @@ function init(){
 }
 
 function enviarMed(){
-  nomMed=document.getElementById("tipoMedicamento").value;
-  cantidad=document.getElementById("cantidad").value;
-  periodicidad=document.getElementById("periodicidad").value;
-  dias=document.getElementById("dias").value;
-  horas=document.getElementById("horas").value;
-  horamed=document.getElementById("horamed").value;
-  fecha=document.getElementById("fecha").value;
-
-if(verificarMed(nomMed)==false || cantidad=="" || periodicidad=="" || horamed=="" || fecha==""){
+  const tiempoTranscurrido = Date.now();
+  const fe = new Date(fecha.value);
+if(verificarMed(nomMed.value)==false || cantidad.value=="" || periodicidad.value=="" || horamed.value=="" || fecha.value=="" || (fe.getTime()<tiempoTranscurrido)){
   alert("campos en blanco o no validos");
 }else{
-  
-  document.getElementById("tipoMedicamentos").value="";
-  document.getElementById("cantidad").value="";
-  document.getElementById("periodicidad").value="";
-  document.getElementById("dias").value="";
-  document.getElementById("horas").value="";
-  document.getElementById("horamed").value="";
-  document.getElementById("fecha").value="";
-  
   var obj={
-    Nombre_medico: nomMed,
-    Cantidad: cantidad,
-    Periodicidad: periodicidad,
-    Dias: dias, 
-    Horas: horas,
-    Horamed: horamed,
-    Fecha: fecha
+    Nombre_medico: nomMed.value,
+    Cantidad: cantidad.value,
+    Periodicidad: periodicidad.value,
+    Dias: dias.value, 
+    Horas: horas.value,
+    Horamed: horamed.value,
+    Fecha: fecha.value
   }
-  try {
-    idMed=JSON.parse(localStorage.getItem("idMed").toString());
-    localStorage.setItem("idMed",(idMed+1));
-  } catch (error) {
+  if(JSON.parse(localStorage.getItem("idMed"))==null){
     idMed=0;
     localStorage.setItem("idMed",idMed+1);
+  }else{
+    idMed=JSON.parse(localStorage.getItem("idMed"));
+    localStorage.setItem("idMed",(idMed+1));
   }
   localStorage.setItem("med "+(idMed+1),JSON.stringify(obj));
+  clear();
 }
-
 }
-function verificarMed() {
-  var input = document.getElementById("tipoMedicamento").value;
-  var opciones = document.getElementById("opciones-medicamentos").options;
+function clear(){
+  nomMed.value="";
+  cantidad.value="";
+  periodicidad.value="";
+  dias.value="";
+  horas.value="";
+  horamed.value="";
+  fecha.value="";
+}
+function verificarMed(nomMed) {
+  var opciones = document.getElementById("opciones-medicamento").options;
   var encontrado = false;
 
   for (var i = 0; i < opciones.length; i++) {
-    if (input === opciones[i].value) {
+    if (nomMed === opciones[i].value) {
       encontrado = true;
       break;
     }
