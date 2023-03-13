@@ -21,19 +21,21 @@ function enviarPat(){
         Patologia: selected.text,
         Descripcion: descripcion
     }
+    if(selected.text=="Seleccione un medicamento"){
+      alert("Nada seleccionado");
+    }else{
+      if(JSON.parse(localStorage.getItem("idPato"))==null){
+        idPato=0;
+        localStorage.setItem("idPato",idPato+1);
+      }else{
+        idPato=JSON.parse(localStorage.getItem("idPato").toString());
+        localStorage.setItem("idPato",(idPato+1));
+      }
+      localStorage.setItem("Pato "+(idPato+1),JSON.stringify(obj));
+  
+      tablaPato.innerHTML+= "<div>"+(idPato+1)+"</div><div>"+obj['Patologia']+"</div><div>"+obj['Descripcion']+"</div>";;
+          
+    }
     
-  try {
-    idPato=JSON.parse(localStorage.getItem("idPato").toString());
-    localStorage.setItem("idPato",(idPato+1));
-  } catch (error) {
-    idPato=0;
-    localStorage.setItem("idPato",idPato+1);
-  }
-  localStorage.setItem("Pato "+(idPato+1),JSON.stringify(obj));
-
-   
-    var text="Patologia: "+obj['Patologia']+' // Descripcion: '+obj['Descripcion'];
-    tablaPato.innerHTML += "<div>"+(idPato+1)+"</div><div>"+text+"</div><div></div>";
-        
     
 }

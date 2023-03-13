@@ -53,14 +53,12 @@ function clear(){
 function verificarMed(nomMed) {
   var opciones = document.getElementById("opciones-medicamento").options;
   var encontrado = false;
-
   for (var i = 0; i < opciones.length; i++) {
     if (nomMed === opciones[i].value) {
       encontrado = true;
       break;
     }
   }
-
   if (encontrado) {
     return true;
   } else {

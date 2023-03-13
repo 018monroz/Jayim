@@ -1,6 +1,6 @@
 var seccionesPatos=document.getElementById("seccionesPato");
 var descripcion=document.getElementById("txtarea");
-var tablaPato=document.getElementById("tablaPato");
+var tablaPato=document.getElementById("contenedorPato");
 var idPato=0;
 
 window.onload=init;
@@ -9,8 +9,7 @@ function init(){
         var key = localStorage.key(i).toString().split(" ");
         if(key[0]=="Pato"){
             var value = JSON.parse(localStorage.getItem(localStorage.key(i)));
-            var text="Patologia: "+value['Patologia']+" // Descripcion: "+value['Descripcion'];
-            tablaPato.innerHTML += "<tr id='"+key[1]+"'><td>"+key[1]+"</td><td>"+text+"</td></tr>";
+            tablaPato.innerHTML += "<div>"+key[1]+"</div><div>"+value['Patologia']+"</div><div>"+value['Descripcion']+"</div>";;
         }
     }
 }
