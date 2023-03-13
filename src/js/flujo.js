@@ -1,4 +1,4 @@
 window.onload=init();
 function init(){
-    location.href="/Jayim/src/splash.html";
+    location.href="src/splash.html";
 }
