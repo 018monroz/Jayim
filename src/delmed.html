@@ -5,35 +5,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css/crstyle.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <div class="app">
-        <div class="logomini">
-            <img class="logo" src="https://cdn.discordapp.com/attachments/845745384953610240/1074132969322729522/1b8bdcf6004ed831ea6441af83a38a3e-signo-de-simbolo-de-medicina.png" alt="">
+        <div class="del">
+            <div class="logomini">
+                <img class="logo" src="https://cdn.discordapp.com/attachments/845745384953610240/1074132969322729522/1b8bdcf6004ed831ea6441af83a38a3e-signo-de-simbolo-de-medicina.png" alt="">
+            </div>
+            <div class="titulo">
+                <h3>Eliminar medicamento</h3>
+            </div>
+            <input type="image" class="btn_cerrar1" id="btn_main" onclick="inicializar(event)" src="https://media.discordapp.net/attachments/845745384953610240/1074125706096803961/image_1.png" alt="" height="42px" width="42px">    
         </div>
-        <input type="image" class="btn_cerrar" id="btn_main" onclick="inicializar(event)" src="https://media.discordapp.net/attachments/845745384953610240/1074125706096803961/image_1.png" alt="" height="42px" width="42px">
-        <div class="titulo">
-            <h3>Eliminar medicamento</h3>
-        </div>
+        
 
         <div class="formulario">
             <br>
-            <div class="foto">
+            <div class="foto1">
                 <img src="https://i.pinimg.com/736x/65/3d/5c/653d5cf7171ab047937fa141b254c14a.jpg" alt="">
             </div><br>
             <h2>Seleccione el medicamento que desea eliminar</h2>
-            <div class="seccion1">
+            <div class="seccion4">
                 <div class="caja">
                     <select id="seccionesMed">
                         <option selected >Seleccione un medicamento</option>
                     </select>
                 </div>
             </div>
-            <div class="titulo1">
+            <div class="titulo3">
                 <h2>Tus medicamentos</h2>
             </div>
-            <div id="div1">
+            <div id="div3">
                 <div id="contenedorMedicamentos" class="contenedor">
                     <div class="in1" style="grid-area: 1 / 1 / 2 / 2;"> <h3>ID</h3></div>
                     <div class="in2" style="grid-area: 1 / 2 / 2 / 3;"><h3>Medicamento</h3></div>
@@ -41,7 +44,6 @@
                 </div>        
            </div>
         </div>
-
         <div class="enviar">
             <button class="btn_enviar" id="btn_eliminar" onclick="eliminar()">Eliminar</button>
         </div>
