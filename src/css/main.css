@@ -34,7 +34,6 @@ p{
     width: 50px;
     border-radius: 30px;
 }
-/* ------------------------------------------------------------------ */
 .app{
     width:380px;
     height:680px;
@@ -98,7 +97,6 @@ p{
     90% {height:130px;transform:translateY(5px);background:rgba(255,255,255,1);}
     100% {height:120px;transform:translateY(0px);background:rgba(255,255,255,1);}
 }
-/* ------------------------------------------------------------------------------------------------------------------------------------------ */
 .configuracion{
     background: rgb(255,255,255);
     background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(58,126,125,1) 52%, rgba(29,68,68,1) 100%);
@@ -178,7 +176,6 @@ p{
     transition: height .4s;
     height: 0;
 }
-/* ------------------------------------------------------------------------- */
 .del{
     display: flex;
 }
@@ -235,7 +232,6 @@ p{
     border-bottom: solid;
     height:50px;
 }
-/* ------------------------------------------------------------------------- */
 .perfil{
     background: rgb(255,255,255);
     background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(58,126,125,1) 52%, rgba(29,68,68,1) 100%);
@@ -266,8 +262,6 @@ p{
     border-style: solid;
     border-radius: 80px;
 }
-
-
 .foto{
     border-color: black;
     height: 25%;
@@ -390,7 +384,6 @@ select:focus{ outline: none;}
     border-color: white;
     font-style: bright;
 }
-/* -------------------------------------------------------- */
 .header-main{
     display: flex;
     padding-top: 20px;
@@ -540,7 +533,6 @@ a:hover{
     display: flex;
     left: 7%;
 }
-/* ---------------------------------------------------------------- */
 h2{
     height: 40px;
 }
@@ -606,5 +598,3 @@ h3{
     border-color: white;
     font-style: bright;
 }
-/* ----------------------------------------------------- */
-

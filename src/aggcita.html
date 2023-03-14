@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
     <div class="app">
@@ -18,8 +18,6 @@
             </div>
             <input type="image" class="btn_cerrar1" id="btn_main" onclick="inicializar(event)" src="https://media.discordapp.net/attachments/845745384953610240/1074125706096803961/image_1.png" alt="" height="42px" width="42px">
         </div>
-        
-
         <div class="formulario">
             <h3>Tipo de cita</h3>
             <input type="text" id="tipoCita" list="opciones-consultas">
@@ -99,8 +97,7 @@
             <input type="text" id="descripcion">
             <h3>Nombre del médico</h3>
             <input type="text" id="nomMedico">
-            <h3>Tipo de médico</h3>
-            
+            <h3>Tipo de médico</h3> 
             <input type="text" id="tipoMedico" list="opciones-medicos">
             <datalist id="opciones-medicos">
                 <option value= "Médico de familia">
@@ -148,20 +145,15 @@
                 <option value= "Médico de atención domiciliaria">
                 <option value= "Médico de cuidados paliativos">
             </datalist>
-
-
             <h3>Hora  ---  Fecha</h3>
             <input type="time" id="hora">
             <input type="date" id="fecha">
             <h3>Lugar</h3>
             <input type="text" id="lugar">           
         </div>
-
         <div class="enviar">
             <button class="btn_enviar1" id="btn_enviar">Enviar</button>
         </div>
-
-
     </div>
     <script src="js/tablas.js"></script>
     <script src="js/navegacion.js"></script>
