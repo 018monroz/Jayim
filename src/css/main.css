@@ -31,12 +31,15 @@ p{
 html{
     width: 100vw;
     height: 100vh;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+body{
+    margin:0;
 }
 .app{
     width: 100vw;
     height: 100vh;
-    margin-left: -8px;
-    margin-right: -8px;
     background: rgb(255,255,255);
     background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(58,126,125,1) 52%, rgba(29,68,68,1) 100%);
     overflow-y: auto;
@@ -45,15 +48,17 @@ html{
 
 }
 #preloader_1{
-    position:relative;
-    margin-top: 90%;
-    margin-left: 37%;
+    height: 100vh;
+    width: 100vw;
+
 }
 #preloader_1 span{
+    border-style: solid;
 	display:block;
-	bottom:0px;
+	bottom:50vh;
 	width: 9px;
 	height: 5px;
+    margin-left: 42vw;
 	background:rgb(255,255,255);
 	position:absolute;
     animation: preloader_1 1.5s ease-in-out 4;
@@ -115,7 +120,7 @@ html{
 .nav{
     background: transparent;
     width: 100vw;
-    height: 100%;
+    height: 70vh;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -140,6 +145,9 @@ html{
     height: 563px;
     display: flex;
     flex-direction: column;
+    padding-left: 0px;
+    height: 570px;
+
 }
 .list__item{
     background-color: white;
@@ -196,7 +204,7 @@ html{
     border-color: black;
     background-color: white;
     overflow-y: scroll;
-    height:170px;
+    height:150px;
     width:100%;
 }
 #div1 {
@@ -247,9 +255,10 @@ html{
 }
 .header-perfil{
     display: flex;
-    padding-top: 20px;
-    padding-left: 30px;
-    padding-right: 10px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    
 }
 .p1{
     color: black;
@@ -268,11 +277,13 @@ html{
     border-color: black;
     height: 25%;
     width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 .foto img{
     height: 150px;
     width: 150px;
-    margin-left: 30%;
     margin-top: 25px;
     border-style: solid;
     border-radius: 80px;
@@ -284,6 +295,9 @@ html{
 }
 .seccion1{
     display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 .p2{
     color: white;
@@ -372,8 +386,12 @@ select {
     height: 110px;
     border-radius: 10px;
 }
+.dbtn_anadirp{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .btn_añadirP{
-    margin-left: 25%;
     height: 35px;
     width: 200px;
     border-radius: 20px;
@@ -574,8 +592,11 @@ h3{
     border-radius: 20px;
     border-style: solid;
 }
-.enviar{
+.enviar1{
     margin-top: 8px;
+}
+.enviar{
+    margin-top: 31px;
 }
 .btn_enviar{
     height: 35px;

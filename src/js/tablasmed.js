@@ -1,7 +1,7 @@
 
 var nomMed,cantidad,periodicidad,dias,horas,horamed,fecha,btn_enviar;
 var idMed=0;
-nomMed=document.getElementById("tipoMedicamento");
+nomMed=document.getElementById("opciones-medicamento");
 cantidad=document.getElementById("cantidad");
 periodicidad=document.getElementById("periodicidad");
 dias=document.getElementById("dias");
@@ -18,7 +18,7 @@ function init(){
 function enviarMed(){
   const tiempoTranscurrido = Date.now();
   const fe = new Date(fecha.value);
-if(verificarMed(nomMed.value)==false || cantidad.value=="" || periodicidad.value=="" || horamed.value=="" || fecha.value=="" || (fe.getTime()<tiempoTranscurrido)){
+if(nomMed.value=="" || cantidad.value=="" || periodicidad.value=="" || horamed.value=="" || fecha.value=="" || (fe.getTime()<tiempoTranscurrido)){
   alert("campos en blanco o no validos");
 }else{
   var obj={
@@ -49,19 +49,4 @@ function clear(){
   horas.value="";
   horamed.value="";
   fecha.value="";
-}
-function verificarMed(nomMed) {
-  var opciones = document.getElementById("opciones-medicamento").options;
-  var encontrado = false;
-  for (var i = 0; i < opciones.length; i++) {
-    if (nomMed === opciones[i].value) {
-      encontrado = true;
-      break;
-    }
-  }
-  if (encontrado) {
-    return true;
-  } else {
-    return false;
-  }
 }

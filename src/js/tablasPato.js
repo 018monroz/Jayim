@@ -21,8 +21,8 @@ function enviarPat(){
         Patologia: selected.text,
         Descripcion: descripcion
     }
-    if(selected.text=="Seleccione un medicamento"){
-      alert("Nada seleccionado");
+    if(selected.text=="Seleccione un medicamento" || descripcion==""){
+      alert("Campos vacíos");
     }else{
       if(JSON.parse(localStorage.getItem("idPato"))==null){
         idPato=0;
