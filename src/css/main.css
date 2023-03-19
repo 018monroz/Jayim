@@ -103,8 +103,6 @@ body{
 .configuracion{
     width: 100vw;
     height: 100vh;
-    margin-left: -8px;
-    margin-right: -8px;
     background: rgb(255,255,255);
     background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(58,126,125,1) 52%, rgba(29,68,68,1) 100%);
     overflow-y: auto;
